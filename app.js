@@ -6,6 +6,7 @@ let app = express();
 
 //upload file of route
 const routerUser = require('./routes/user'); 
+const routeTopic = require('./routes/topic');
 
 //Middleware
 app.use(bodyParser.urlencoded({extended: false}));
@@ -21,5 +22,7 @@ app.get('/prueba', (req, res) => {
 // add api to all routes of router user
 app.use('/api', routerUser);
 
+// add api to all routes of router user
+app.use('/api', routeTopic);
 //exportar module
 module.exports = app;
