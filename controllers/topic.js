@@ -173,6 +173,43 @@ let controller = {
                 topicRemoved
             });
         });
+    },
+    search: function (req, res) {
+
+        let search = req.params.search;
+        if (!search.trim() || search.trim().length <= 1) {
+            return res.status(400).send({
+                message: 'Bad Request'
+            });
+        }
+        /* find topic */
+        Topic.find({
+            '$or': [
+                { 'title': { '$regex': search.trim(), '$options': 'i' } },
+                { 'content': { '$regex': search.trim(), '$options': 'i' } },
+                { 'code': { '$regex': search.trim(), '$options': 'i' } },
+                { 'lang': { '$regex': search.trim(), '$options': 'i' } }
+            ]
+        })
+            .sort([['date', 'descending']])
+            .populate('user')
+            .exec((err, topics) => {
+                if (err) {
+                    return res.status(403).send({
+                        message: 'Resource not found'
+                    });
+                }
+
+                if (!topics) {
+                    return res.status(403).send({
+                        message: 'Resource not found'
+                    });
+                }
+
+                return res.status(200).send({
+                    topics
+                });
+            });
     }
 }
 
