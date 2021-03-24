@@ -9,7 +9,6 @@ let mdUpload = multiparty({uploadDir: './uploads/users'});
 //upload object route
 let router = express.Router();
 
-router.get('/test', userController.test);
 //routes user
 router.post('/register', userController.save);
 router.post('/login', userController.login);
