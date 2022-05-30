@@ -28,7 +28,8 @@
     "mongoose": "^5.11.18",
     "mongoose-paginate-v2": "^1.3.16",
     "schemy": "^1.11.0",
-    "validator": "^13.5.2"
+    "validator": "^13.5.2",
+    "config": "^3.3.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

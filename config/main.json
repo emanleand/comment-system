@@ -1,0 +1,9 @@
+{
+    "database": {
+        "name_db": "forum_api_rest",
+        "port_db": 27017,
+        "user_db": "ali",
+        "psw_db": "ali123"
+    },
+    "port": 3000
+}
