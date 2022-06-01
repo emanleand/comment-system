@@ -15,7 +15,7 @@ Require NodeJS v10+. Perform the following steps
 ## Function
 ### User
 #### Register a New User
-<img src="./diagrams/icons/POST.svg" alt="drawing" height="17"/> **/api/registerr**
+<img src="./diagrams/icons/POST.svg" alt="drawing" height="17"/> **/api/register**
 
 ```JAVA
 --header 'Content-Type: application/json' \
@@ -147,7 +147,7 @@ image
 --data-raw '{
     "email": "emanleand@gmail.com",
     "password": "******",
-    "gettoken": true
+    "gettoken": "true"
 }'
 ```
 
