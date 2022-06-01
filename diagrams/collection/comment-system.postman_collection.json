@@ -1,0 +1,472 @@
+{
+	"info": {
+		"_postman_id": "7c0cb6b4-1a9c-4876-9604-f18ea16c86c5",
+		"name": "comment-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"ali\",\n    \"surname\": \"zelaya\",\n    \"email\": \"zsoled@gmail.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlLocal}}/register",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"leand\",\n    \"surname\": \"gutierrez\",\n    \"email\": \"emanleand@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlLocal}}/update",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Avatar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": []
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlLocal}}/upload-avatar",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"upload-avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Avatar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlLocal}}/get-avatar/image.png",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"get-avatar",
+								"image.png"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlLocal}}/user/6294489c8b7032fe90ee569b",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"user",
+								"6294489c8b7032fe90ee569b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlLocal}}/user/list",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"user",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"emanleand@gmail.com\",\n    \"password\": \"******\",\n    \"gettoken\": \"true\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlLocal}}/login",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Topic",
+			"item": [
+				{
+					"name": "healt topic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlLocal}}/topic/test",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"topic",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Topic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlLocal}}/topic/list/1",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"topic",
+								"list",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Topic By User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlLocal}}/topic/list-user/6294489c8b7032fe90ee569b",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"topic",
+								"list-user",
+								"6294489c8b7032fe90ee569b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Topic By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlLocal}}/topic/detail/6294511d8b7032fe90ee56a8",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"topic",
+								"detail",
+								"6294511d8b7032fe90ee56a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Topic Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlLocal}}/topic/search/title",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"topic",
+								"search",
+								"title"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Topic",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{urlLocal}}/topic/6294511d8b7032fe90ee56a8",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"topic",
+								"6294511d8b7032fe90ee56a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Topic",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"title\",\n    \"content\": \"content\",\n    \"lang\": \"lang\",\n    \"code\": \"code\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlLocal}}/topic",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"topic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Topic",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"title2\",\n    \"content\": \"content\",\n    \"lang\": \"lang\",\n    \"code\": \"code\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlLocal}}/topic/6294511d8b7032fe90ee56a8",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"topic",
+								"6294511d8b7032fe90ee56a8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Add Comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"segundo contenido agregado\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlLocal}}/comment/topic/629454cb8b7032fe90ee56bf",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"comment",
+								"topic",
+								"629454cb8b7032fe90ee56bf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"contenido agregado y modificado\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlLocal}}/comment/6296c9f41808d019c66fa8c4",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"comment",
+								"6296c9f41808d019c66fa8c4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"contenido agregado y modificado\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlLocal}}/comment/629454cb8b7032fe90ee56bf/6296cb2c1808d019c66fa8c8",
+							"host": [
+								"{{urlLocal}}"
+							],
+							"path": [
+								"comment",
+								"629454cb8b7032fe90ee56bf",
+								"6296cb2c1808d019c66fa8c8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
